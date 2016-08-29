@@ -1,0 +1,62 @@
+<?php
+$contactForm = $this->contact;
+$contactForm->prepare();
+?>
+
+<div class="row detect-donate">
+    <div class="col-xs-12 row-margin">
+        <h1 id="content-heading">Donate</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2 id='bank-details-heading'>Banking Details:</h2>
+        <p class="about-pgraph" id="bank-details-pgraph">
+            Account Name : <span id="bank-account-name" class="float-bank-details">Langa Cheshire Home</span><br>
+            Bank : <span id="bank-name" class="float-bank-details">Standard Bank</span><br>
+            Account no. : <span id="bank-account-number" class="float-bank-details">07279248502</span><br>
+            Branch code : <span id="bank-code" class="float-bank-details">025909</span>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <p class="about-pgraph">
+            Your donation will help provide a safe and caring environment for our residents and give us the chance to help even
+            more people with disabilities in the future. We also take clothing which we sell from our charity shop. Should you 
+            have any queries about how to donate please do not hesitate to send us an email below or call us on 
+            <span style="color: #c30e55; font-size: .8em">+21 694-2844.</span>
+        </p>
+    </div>
+    <div id="mission-map-container" class="col-md-4">
+        <div id="map">
+            <h2>Map</h2>
+            <p class="about-pgraph">
+                Rhodes Avenue<br> 
+                Langa<br> 
+                Cape Town<br> 
+                7455
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13239.166209698715!2d18.5287249!3d-33.946489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ae6fdef8dd1c457!2sCheshire+Home+Langa!5e0!3m2!1sen!2sza!4v1471560572325" 
+                    height="300" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<div id="line-break-padding" class="row"><div id="line-break" class="col-md-8"></div></div>
+<div class="row" id="mission-footer-margin">
+    <div class="col-md-8">
+        <?php
+        echo $this->form()->openTag($contactForm);
+        echo $this->formRow($contactForm->get('name'));
+        echo "<br/><br/>";
+        echo $this->formRow($contactForm->get('email'));
+        echo "<br/><br/>";
+        ?>
+        <div id="message-container">
+            <?php echo $this->formRow($contactForm->get('message')); ?>
+        </div>
+        <?php
+        echo $this->formElement($contactForm->get('submit'));
+        echo "<br/>"; 
+        echo $this->form()->closeTag(); 
+        ?> 
+    </div>
+</div>

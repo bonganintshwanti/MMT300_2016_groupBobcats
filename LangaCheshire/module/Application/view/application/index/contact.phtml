@@ -1,0 +1,75 @@
+<?php
+$contactForm = $this->contact;
+$contactForm->prepare();
+?>
+
+<div class="row detect-contact">
+    <div class="col-xs-12 row-margin">
+        <h1 id="content-heading">Contact Us</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2 id='address-heading'>Physical Address:</h2>
+        <p class="about-pgraph">
+            Rhodes Avenue<br>
+            Langa<br>
+            Cape Town<br>
+            7455
+        </p>
+        <h2 id='address-heading'>Postal Address:</h2>
+        <p class="about-pgraph">
+            PO Box 37<br>
+            Langa<br>
+            Cape Town<br>
+            7455
+        </p>
+    </div>
+    <div class="col-md-4">
+        <p class="about-pgraph">
+            If you have any questions about who we are or what we do please send us an email below. Alternatively you can call 
+            or fax us on these numbers:
+        </p>
+        <p class="about-pgraph">
+            Phone number : <span style="color: #c30e55; font-size: .8em; margin-left: 5px;">+21 694-2844</span><br>
+            Fax number : <span style="color: #c30e55; font-size: .8em; margin-left: 23px;">+21 694-0214</span><br>
+            Email address : 
+            <a href="mailto:info@langacheshire.org.za">
+                <span style="color: #c30e55; font-size: .8em; margin-left: 10px;">info@langacheshire.org.za</span>
+            </a>
+        </p>
+    </div>
+    <div id="mission-map-container" class="col-md-4">
+        <div id="map">
+            <h2>Map</h2>
+            <p class="about-pgraph">
+                Rhodes Avenue<br> 
+                Langa<br> 
+                Cape Town<br> 
+                7455
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13239.166209698715!2d18.5287249!3d-33.946489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ae6fdef8dd1c457!2sCheshire+Home+Langa!5e0!3m2!1sen!2sza!4v1471560572325" 
+                    height="300" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<div id="line-break-padding" class="row"><div id="line-break" class="col-md-8"></div></div>
+<div class="row">
+    <div class="col-md-8">
+        <?php
+        echo $this->form()->openTag($contactForm);
+        echo $this->formRow($contactForm->get('name'));
+        echo "<br/><br/>";
+        echo $this->formRow($contactForm->get('email'));
+        echo "<br/><br/>";
+        ?>
+        <div id="message-container">
+            <?php echo $this->formRow($contactForm->get('message')); ?>
+        </div>
+        <?php
+        echo $this->formElement($contactForm->get('submit'));
+        echo "<br/>"; 
+        echo $this->form()->closeTag(); 
+        ?> 
+    </div>
+</div>

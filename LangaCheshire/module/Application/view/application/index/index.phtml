@@ -1,0 +1,56 @@
+<div class="row detect-home">
+    <div class="col-xs-12">
+        <div id="banner-txt">
+            <h1>Langa Cheshire Home</h1>
+            <p>
+                provides stable, caring, and nurturing residential care to people with severe physical disabilities.
+                People from disadvantaged communities who would otherwise be unable to receive the care and support
+                they so desperately need.
+            </p>
+            <p>Learn how you can help this incredible organisation reach out and provide shelter to more people in need.</p>
+            <a href="<?php echo $this->url('needs') ?>"><button id="needs-btn">What we need</button></a>
+        </div>
+        <img id="banner" src="<?php echo $this->basePath('img/banner.jpg') ?>" alt="Langa Cheshire Home entrance"/>
+    </div>
+</div>
+<div class="row" id="home-below-line">
+    <div class="col-xs-12 col-md-4 row-margin">
+        <img class="home-img" src="<?php echo $this->basePath('img/charity_shop.jpg') ?>" 
+                              srcset="<?php echo $this->basePath('img/charity_shop.jpg 1x') ?>, 
+                                      <?php echo $this->basePath('img/charity_shop@2x.jpg 2x') ?>,
+                                      <?php echo $this->basePath('img/charity_shop@3x.jpg 3x') ?>" 
+                              alt="Charity shop"/>
+        <p>
+            Langa Cheshire Home relies heavily on donations. Here is an image of our charity shop where we sell 
+            donated clothes to the Langa community. Visit the donations page to make your contribution today and
+            help improve the lives of all our residents.
+        </p>
+        <a class="pgraph-link" href="<?php echo $this->url('donate') ?>">Make a donation</a>
+    </div>
+    <div class="col-xs-12 col-md-4 row-margin">
+        <img class="home-img" src="<?php echo $this->basePath('img/garden.jpg') ?>" 
+                              srcset="<?php echo $this->basePath('img/garden.jpg 1x') ?>, 
+                                      <?php echo $this->basePath('img/garden@2x.jpg 2x') ?>,
+                                      <?php echo $this->basePath('img/garden@3x.jpg 3x') ?>" 
+                              alt="Garden"/>
+        <p>
+            We have a sustained garden project in an effort to save on catering costs, but if we are to
+            grow and achieve our goals, we will need a lot of outside help. Follow the link to read about
+            our plans for the future and how we intend on helping as many disabled people as possible.
+        </p>
+        <a class="pgraph-link" href="<?php echo $this->url('vision') ?>">Our vision</a>
+    </div>
+    <div class="col-xs-12 col-md-4 row-margin">
+        <img class="home-img" src="<?php echo $this->basePath('img/kitchen.jpg') ?>"
+                              srcset="<?php echo $this->basePath('img/kitchen.jpg 1x') ?>, 
+                                      <?php echo $this->basePath('img/kitchen@2x.jpg 2x') ?>,
+                                      <?php echo $this->basePath('img/kitchen@3x.jpg 3x') ?>" 
+                              alt="Kitchen"/>
+        <p>
+            It is very important to us that our residents are properly cared for. We provide many services
+            to make their lives easier including day care and making sure that they are properly fed and have
+            access to whatever they need.
+        </p>
+        <a class="pgraph-link" href="<?php echo $this->url('services') ?>">View services</a>
+    </div>
+</div>

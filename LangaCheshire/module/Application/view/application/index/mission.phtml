@@ -1,0 +1,51 @@
+<div class="row detect-mission">
+    <div class="col-xs-12 row-margin">
+        <h1 id="content-heading">Mission</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <p class="about-pgraph">
+            Our mission is to provide stable and nurturing residential care to people with severe physical disabilities, 
+            especially those from disadvantaged communities who don’t have the support structure 
+            or financial means to receive the help they need. 
+        </p> 
+        <p class="about-pgraph">
+            Human rights of all people is of the upmost importance to us and it's because of this that we strive to ensure 
+            that the services we offer fulfil the needs of all our residents resulting in a positive overall quality of life. 
+        </p>
+    </div>
+    <div id="mission-map-container" class="col-md-4">
+        <div id="map">
+            <h2>Map</h2>
+            <p class="about-pgraph">
+                Rhodes Avenue<br> 
+                Langa<br> 
+                Cape Town<br> 
+                7455
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13239.166209698715!2d18.5287249!3d-33.946489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ae6fdef8dd1c457!2sCheshire+Home+Langa!5e0!3m2!1sen!2sza!4v1471560572325" 
+                    height="300" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<div id="line-break-padding" class="row"><div id="line-break" class="col-md-8"></div></div>
+<div class="row" id="mission-footer-margin">
+    <div class="col-md-4" id="about2-img-section">
+        <img class="about-img" src="<?php echo $this->basePath('img/mission.jpg') ?>" 
+                               srcset="<?php echo $this->basePath('img/mission.jpg 1x') ?>, 
+                                       <?php echo $this->basePath('img/mission@2x.jpg 2x') ?>,
+                                       <?php echo $this->basePath('img/mission@3x.jpg 3x') ?>" 
+                               alt="Residents getting some sun"/>
+    </div>
+    <div class="col-md-4">
+        <p class="about-pgraph">
+            Everyone has the right to live a life of dignity and joy which is why we also encourage our residents to 
+            take control of their lives by consulting them during the decision making process regarding their care. 
+        </p>
+        <p class="about-pgraph">
+            Follow the link to find out how you can help us improve the lives of our current and future residents.
+        </p>
+        <a class="pgraph-link content-pgraph-link" href="<?php echo $this->url('needs') ?>">What we need</a>
+    </div>
+</div>

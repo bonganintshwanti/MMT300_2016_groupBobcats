@@ -1,0 +1,247 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Langa Cheshire Home') ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath('css/style.css'))
+                        ->prependStylesheet($this->basePath('css/bootstrap.min.css')) ?>
+
+    </head>
+    <body>
+        <!-- mobile menu -->
+        <header id="mobile-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <a href="<?php echo $this->url('home') ?>">
+                            <img id="logo" src="<?php echo $this->basePath('img/lch_logo.png') ?>" alt="Langa Cheshire Home logo"/>
+                        </a>
+                    </div>
+                    <div id="menu-btn" class="col-xs-6">
+                        <a id="hamburger">
+                            <h4>M<span class="menu-sml-caps">ENU</span></h4>
+                            <svg width="33px" height="29px">
+                                <rect class="svg-menu" x="1" y="1" width="30px" height="26px" rx="2" ry="2"/>
+                                <line id="top-line-x" class="svg-menu" x1="7" y1="8" x2="25" y2="8"/>
+                                <line id="middle-line-x" class="svg-menu" x1="7" y1="14" x2="25" y2="14"/>
+                                <line id="bottom-line-x" class="svg-menu" x1="7" y1="20" x2="25" y2="20"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="row" id="mobile-sec-bar">
+                    <div class="col-xs-6" id="call-us-container">
+                        <a id="call-us" href="tel:0216942844">+21 694-2844</a>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="<?php echo $this->url('donate') ?>">
+                            <button id="mobile-donate-btn">Donate</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav id="mobile-menu">
+            <ul id="mobile-ul">
+                <li> 
+                    <a class="mobile-a on-home" href="<?php echo $this->url('home') ?>">HOME</a>
+                </li>
+                <li> 
+                    <a class="mobile-a on-about" href="<?php echo $this->url('about') ?>">ABOUT US</a>
+                </li>
+                <li class="mobile-li-sub">|</li>
+                <li class="mobile-li-sub"> 
+                    <a class="mobile-a mobile-a-sub on-mission" href="<?php echo $this->url('mission') ?>">MISSION</a>
+                </li>
+                <li class="mobile-li-sub"> 
+                    <a class="mobile-a mobile-a-sub on-vision" href="<?php echo $this->url('vision') ?>">VISION</a>
+                </li>
+                <li class="mobile-li-sub"> 
+                    <a class="mobile-a mobile-a-sub on-history" href="<?php echo $this->url('history') ?>">HISTORY</a>
+                </li>
+                <li> 
+                    <a class="mobile-a on-needs" href="<?php echo $this->url('needs') ?>">NEEDS</a>
+                </li>
+                <li> 
+                    <a class="mobile-a on-services" href="<?php echo $this->url('services') ?>">SERVICES</a>
+                </li>
+                <li> 
+                    <a class="mobile-a on-gallery" href="<?php echo $this->url('gallery') ?>">GALLERY</a>
+                </li>
+                <li> 
+                    <a class="mobile-a on-newsletter" href="<?php echo $this->url('newsletter') ?>">NEWSLETTER</a>
+                </li>
+                <li> 
+                    <a class="mobile-a on-contact" href="<?php echo $this->url('contact') ?>">CONTACT US</a>
+                </li>
+                <li> 
+                    <a class="mobile-a on-register" href="<?php echo $this->url('register') ?>">REGISTER</a>
+                </li>
+                <li> 
+                    <a class="mobile-a on-login" href="<?php echo $this->url('login') ?>">LOGIN</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- desktop menu -->
+        <header id="big-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <a href="<?php echo $this->url('home') ?>">
+                            <img id="big-logo" src="<?php echo $this->basePath('img/lch_logo.png') ?>" alt="Langa Cheshire Home logo"/>
+                        </a>
+                    </div>
+                    <div class="col-xs-6">
+                        <div id="phone-fax-container">
+                            <p class="phone-fax">Call us: <span>+21 694-2844</span></p>
+                            <p class="phone-fax">Fax: <span id="fax">+21 694-0214</span></p>
+                        </div>
+                        <div id="social-container">
+                            <a href="<?php echo $this->url('contact') ?>">
+                                <svg class="envelope" viewBox="10 0 70 72" width="40px" height="30px">
+                                    <polygon class="envelope-part" fill="#c30e55" points="28.3,23.9 2.4,4 2.4,51.5 "/>
+                                    <polygon class="envelope-part" fill="#c30e55" points="59,25.5 44.7,36.6 29.9,25.2 3.7,53.1 85.6,53.1 "/>
+                                    <polygon class="envelope-part" fill="#c30e55" points="60.6,24.3 86.8,4 86.8,51.5 "/>
+                                    <polygon class="envelope-part" fill="#c30e55" points="44.6,34 85.2,2.7 4,2.7 "/>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/Langa-Cheshire-Home-297799850587464/?skip_nax_wizard=true" target="_blank">
+                                <svg class="social-icon" viewBox="0 0 70 70" width="30px" height="30px">
+                                    <defs><style>.cls-2{fill:#c30e55;}</style></defs> 
+                                    <g id="Layer_2" data-name="Layer 2">
+                                        <g id="facebook">
+                                            <path class="cls-2" d="M52,0H12A12,12,0,0,0,0,12V52A12,12,0,0,0,12,64H52A12,12,0,0,0,64,
+                                                  52V12A12,12,0,0,0,52,0ZM42.08,32H35.75V56.37H26.33V32.12H20.58V23.87h5.75S24.5,7.62,34.58,
+                                                  7.62h8.75v8h-4.5s-3.08,0-3.08,2.67v5.17h7.66Z"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/LangaCheshire" target="_blank">
+                                <svg class="social-icon" viewBox="0 0 70 72" width="30px" height="30px" style="margin-right: 0">
+                                    <g id="Layer_2" data-name="Layer 2">
+                                        <g id="twitter">
+                                            <g id="bird">
+                                                <path class="cls-2" d="M55,0H12A12,12,0,0,0,0,12V54.38a12,12,0,0,0,12,12H55a12,12,0,0,0,12-12V12A12,
+                                                      12,0,0,0,55,0Zm-.37,22.06C53.63,51.44,25.75,61.56,7,49.69c0,0,9.13,1,15.38-4.5,0,0-6.87,
+                                                      0-10-7.62,0,0,3.88.75,4.88-.25a11.12,11.12,0,0,1-8.5-10.75,7.38,7.38,0,0,0,4.63,
+                                                      1.13s-8-5.87-2.87-14.5c0,0,8.63,11.13,22.38,11.38-1.75-10.5,9.63-18.12,18.75-9.75a26,
+                                                      26,0,0,0,6.75-2.75,11.18,11.18,0,0,1-4.5,6.25,27.08,27.08,0,0,0,5.75-1.87A13.92,13.92,0,0,1,
+                                                      54.63,22.06Z"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <nav id="big-menu">
+                            <ul id="big-ul">
+                                <li> 
+                                    <a class="big-a on-home" href="<?php echo $this->url('home') ?>">HOME</a>
+                                </li>
+                                <li id="about"> 
+                                    <a class="big-a on-about on-sub" href="<?php echo $this->url('about') ?>">ABOUT US</a>
+                                    <ul id="dropdown">
+                                        <li class="big-li-sub"> 
+                                            <a class="big-a on-mission" href="<?php echo $this->url('mission') ?>">MISSION</a>
+                                        </li>
+                                        <li class="big-li-sub"> 
+                                            <a class="big-a on-vision" href="<?php echo $this->url('vision') ?>">VISION</a>
+                                        </li>
+                                        <li class="big-li-sub"> 
+                                            <a class="big-a on-history" href="<?php echo $this->url('history') ?>">HISTORY</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li> 
+                                    <a class="big-a on-needs" href="<?php echo $this->url('needs') ?>">NEEDS</a>
+                                </li>
+                                <li> 
+                                    <a class="big-a on-services" href="<?php echo $this->url('services') ?>">SERVICES</a>
+                                </li>
+                                <li> 
+                                    <a class="big-a on-gallery" href="<?php echo $this->url('gallery') ?>">GALLERY</a>
+                                </li>
+                                <li> 
+                                    <a class="big-a on-newsletter" href="<?php echo $this->url('newsletter') ?>">NEWSLETTER</a>
+                                </li>
+                                <li> 
+                                    <a class="big-a on-contact" href="<?php echo $this->url('contact') ?>">CONTACT US</a>
+                                </li>
+                                <li> 
+                                    <a class="big-a on-register" href="<?php echo $this->url('register') ?>">REGISTER</a>
+                                </li>
+                                <li> 
+                                    <a class="big-a on-login" href="<?php echo $this->url('login') ?>">LOGIN</a>
+                                </li>
+                                <li id="donate"> 
+                                    <a class="big-a" href="<?php echo $this->url('donate') ?>">
+                                        <button id="big-donate-btn" class="on-donate">DONATE</button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container" id="main-content">
+            <?php echo $this->content; ?>
+        </div> 
+        <footer>
+            <a href="<?php echo $this->url('contact') ?>">
+                <svg class="envelope" viewBox="10 0 70 72" width="40px" height="30px">
+                    <polygon class="envelope-part" fill="#fff" points="28.3,23.9 2.4,4 2.4,51.5 "/>
+                    <polygon class="envelope-part" fill="#fff" points="59,25.5 44.7,36.6 29.9,25.2 3.7,53.1 85.6,53.1 "/>
+                    <polygon class="envelope-part" fill="#fff" points="60.6,24.3 86.8,4 86.8,51.5 "/>
+                    <polygon class="envelope-part" fill="#fff" points="44.6,34 85.2,2.7 4,2.7 "/>
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/Langa-Cheshire-Home-297799850587464/?skip_nax_wizard=true" target="_blank">
+                <svg class="social-icon" viewBox="0 0 70 70" width="30px" height="30px">
+                    <defs><style>.cls-1{fill:#fff;}</style></defs> 
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="facebook">
+                            <path class="cls-1" d="M52,0H12A12,12,0,0,0,0,12V52A12,12,0,0,0,12,64H52A12,12,0,0,0,64,
+                                  52V12A12,12,0,0,0,52,0ZM42.08,32H35.75V56.37H26.33V32.12H20.58V23.87h5.75S24.5,7.62,34.58,
+                                  7.62h8.75v8h-4.5s-3.08,0-3.08,2.67v5.17h7.66Z"/>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+            <a href="https://twitter.com/LangaCheshire" target="_blank">
+                <svg class="social-icon" viewBox="0 0 70 72" width="30px" height="30px">
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="twitter">
+                            <g id="bird">
+                                <path class="cls-1" d="M55,0H12A12,12,0,0,0,0,12V54.38a12,12,0,0,0,12,12H55a12,12,0,0,0,12-12V12A12,
+                                      12,0,0,0,55,0Zm-.37,22.06C53.63,51.44,25.75,61.56,7,49.69c0,0,9.13,1,15.38-4.5,0,0-6.87,
+                                      0-10-7.62,0,0,3.88.75,4.88-.25a11.12,11.12,0,0,1-8.5-10.75,7.38,7.38,0,0,0,4.63,
+                                      1.13s-8-5.87-2.87-14.5c0,0,8.63,11.13,22.38,11.38-1.75-10.5,9.63-18.12,18.75-9.75a26,
+                                      26,0,0,0,6.75-2.75,11.18,11.18,0,0,1-4.5,6.25,27.08,27.08,0,0,0,5.75-1.87A13.92,13.92,0,0,1,
+                                      54.63,22.06Z"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+            <p id="copyright">&copy; 2016 - Langa Cheshire Home. <?php echo $this->translate('All rights reserved.') ?></p>
+        </footer>
+        <?php echo $this->inlineScript()
+            ->offsetSetFile(10, $this->basePath('js/jquery.min.js'))
+            ->offsetSetFile(20, $this->basePath('js/lch-script.js'))
+        ?>
+    </body>
+</html>

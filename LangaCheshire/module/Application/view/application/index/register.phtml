@@ -1,0 +1,47 @@
+<?php
+$registerForm = $this->register;
+$registerForm->prepare();
+?>
+
+<div class="row detect-register">
+    <div class="col-xs-12 row-margin">
+        <h1 id="content-heading">Register</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <?php
+        echo $this->form()->openTag($registerForm);
+        echo $this->formRow($registerForm->get('firstname'));
+        echo "<br/><br/>";
+        echo $this->formRow($registerForm->get('lastname'));
+        echo "<br/><br/>";
+        echo $this->formRow($registerForm->get('phonenumber'));
+        echo "<br/><br/>";
+        echo $this->formRow($registerForm->get('email'));
+        echo "<br/><br/>";
+        echo $this->formRow($registerForm->get('username'));
+        echo "<br/><br/>";
+        echo $this->formRow($registerForm->get('password'));
+        echo "<br/><br/>";
+        echo $this->formRow($registerForm->get('confirm-password'));
+        echo "<br/><br/>";
+        echo $this->formElement($registerForm->get('submit'));
+        echo "<br/>"; 
+        echo $this->form()->closeTag(); ?> 
+    </div>
+    <div id="map-container-no-margin" class="col-md-4">
+        <div id="map">
+            <h2>Map</h2>
+            <p class="about-pgraph">
+                Rhodes Avenue<br> 
+                Langa<br> 
+                Cape Town<br> 
+                7455
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13239.166209698715!2d18.5287249!3d-33.946489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ae6fdef8dd1c457!2sCheshire+Home+Langa!5e0!3m2!1sen!2sza!4v1471560572325" 
+                    height="300" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
